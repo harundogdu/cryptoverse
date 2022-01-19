@@ -8,6 +8,8 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import Logo from "assets/images/logo.png";
+import Title from "antd/lib/typography/Title";
 /* function */
 const Sidebar = () => {
   const menuItems = [
@@ -46,8 +48,14 @@ const Sidebar = () => {
         top: 0,
         bottom: 0,
       }}
+      width={250}
     >
-      <div className="logo" />
+      <div className="logo">
+        <img src={Logo} alt="Logo" />
+        <Title level={4} className="logo-title">
+          Cryptoverse
+        </Title>
+      </div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         {menuItems.map((item) => (
           <Menu.Item key={item.id} icon={item.icon}>

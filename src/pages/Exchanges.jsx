@@ -1,7 +1,8 @@
-import React from 'react';
+import { Main } from "components";
+import React from "react";
 
 const Exchanges = () => {
-  return <div>Exchanges</div>;
+  return <Main>Exchanges</Main>;
 };
 
 export default Exchanges;

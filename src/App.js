@@ -1,18 +1,18 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "antd";
-import { FooterArea, Sidebar, Main } from "components";
+import { FooterArea, Sidebar } from "components";
 // pages
-import {CryptoCurrencies , News ,Exchanges} from "pages";
+import { Home, CryptoCurrencies, News, Exchanges } from "pages";
 /* function */
 function App() {
   return (
     <BrowserRouter>
       <Layout hasSider>
         <Sidebar />
-        <Layout className="site-layout" style={{ marginLeft: 200 }}>
+        <Layout className="site-layout" style={{ marginLeft: 250 }}>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<Home />} />
             <Route path="/currencies" element={<CryptoCurrencies />} />
             <Route path="/exchanges" element={<Exchanges />} />
             <Route path="/news" element={<News />} />

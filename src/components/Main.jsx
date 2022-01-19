@@ -1,7 +1,7 @@
 import { Content, Header } from "antd/lib/layout/layout";
 import React from "react";
 
-const Main = () => {
+const Main = ({ children }) => {
   return (
     <>
       <Header className="site-layout-background" style={{ padding: 0 }} />
@@ -10,7 +10,7 @@ const Main = () => {
           className="site-layout-background"
           style={{ padding: 24, textAlign: "center" }}
         >
-          content
+          {children}
         </div>
       </Content>
     </>

@@ -1,0 +1,18 @@
+.navbar {
+  overflow: "auto" !important;
+  height: "100vh" !important;
+  position: "fixed" !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.site-layout-background {
+  background: #fff;
+}

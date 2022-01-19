@@ -4,7 +4,7 @@ import React from "react";
 const Main = ({ children }) => {
   return (
     <div className="main">
-      <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
+      <Content>
         {children}
       </Content>
     </div>

@@ -56,7 +56,7 @@ const Sidebar = () => {
           Cryptoverse
         </Title>
       </div>
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+      <Menu theme="dark" mode="inline">
         {menuItems.map((item) => (
           <Menu.Item key={item.id} icon={item.icon}>
             <Link to={item.link}>{item.title}</Link>

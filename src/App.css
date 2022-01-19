@@ -14,6 +14,7 @@ body,
 .main {
   background-color: #F0ECE3;
   flex: 1;
+  padding: 10px 20px;
 }
 
 .logo {
@@ -46,20 +47,51 @@ body,
   flex-direction: column;
 }
 
-.stats-item{
+.stats-item {
   display: flex !important;
   flex-direction: column !important;
   margin-bottom: 20px !important;
 }
 
-.stats-item h4{
+.stats-item h4 {
   font-size: 20px !important;
   font-weight: 400 !important;
   margin-bottom: 0 !important;
 }
 
-.stats-item p{
+.stats-item p {
   margin: 0;
   padding: 0;
   font-size: 24px;
+}
+
+.home-heading-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.currencies-image {
+  width: 55px;
+  height: 55px;
+}
+
+.crypto-card-container {
+  display: flex !important;
+  margin-top: 20px !important;
+}
+
+.crypto-image {
+  width: 35px;
+}
+
+.site-card-wrapper{
+  padding: 10px;
+}
+
+.search-bar{
+  padding: 10px 0 !important;
+}
+.search-bar input{
+  padding: 10px !important;
 }

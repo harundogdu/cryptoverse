@@ -2,7 +2,9 @@ import { Col, Row, Statistic } from "antd";
 import Title from "antd/lib/typography/Title";
 import { Main } from "components";
 import millify from "millify";
+import { CryptoCurrencies } from "pages";
 import React from "react";
+import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "services/cryptoApi";
 const Home = () => {
   const { data, isFetching, error } = useGetCryptosQuery(10);
@@ -12,7 +14,7 @@ const Home = () => {
     <Main>
       <div className="home-container">
         {error && <div>{error.message}</div>}
-        <Title level={2} className="title">
+        <Title level={3} className="title">
           The Global Stats
         </Title>
         <Row gutter={[32, 32]}>
@@ -53,6 +55,15 @@ const Home = () => {
             />
           </Col>
         </Row>
+        <div className="home-heading-container">
+          <Title level={2} className="home-title">
+            Top 10 Cryptos In The World
+          </Title>
+          <Title level={4} className="show-more">
+            <Link to="/cryptocurrencies">Show more</Link>
+          </Title>
+        </div>
+        <CryptoCurrencies simplified />
       </div>
     </Main>
   );

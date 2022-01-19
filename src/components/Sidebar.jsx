@@ -7,9 +7,10 @@ import {
   ShopOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "assets/images/logo.png";
 import Title from "antd/lib/typography/Title";
+
 /* function */
 const Sidebar = () => {
   const menuItems = [
@@ -27,15 +28,15 @@ const Sidebar = () => {
     },
     {
       id: 3,
-      title: "Exchanges",
-      icon: <ShopOutlined />,
-      link: "/exchanges",
-    },
-    {
-      id: 4,
       title: "News",
       icon: <VideoCameraOutlined />,
       link: "/news",
+    },
+    {
+      id: 4,
+      title: "Exchanges",
+      icon: <ShopOutlined />,
+      link: "/exchanges",
     },
   ];
   return (
@@ -59,7 +60,7 @@ const Sidebar = () => {
       <Menu theme="dark" mode="inline">
         {menuItems.map((item) => (
           <Menu.Item key={item.id} icon={item.icon}>
-            <Link to={item.link}>{item.title}</Link>
+            <NavLink to={item.link}>{item.title}</NavLink>
           </Menu.Item>
         ))}
       </Menu>

@@ -27,7 +27,10 @@ const CryptoCurrencies = ({ simplified = false }) => {
 
   if (isFetching) return "Loading...";
   return (
-    <div className="site-card-wrapper">
+    <div
+      className="site-card-wrapper"
+      style={simplified ? { padding: 0 } : { padding: "10px" }}
+    >
       {!simplified && (
         <div className="search-bar">
           <Search

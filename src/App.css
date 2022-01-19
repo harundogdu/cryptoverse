@@ -6,7 +6,6 @@ body,
 
 .app {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -66,9 +65,18 @@ body,
 }
 
 .home-heading-container {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
   margin-top: 20px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.home-heading-container h2,
+.home-heading-container h4 {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .currencies-image {
@@ -85,13 +93,35 @@ body,
   width: 35px;
 }
 
-.site-card-wrapper{
+.site-card-wrapper {
   padding: 10px;
+  background-color: #F0ECE3;
 }
 
-.search-bar{
+.search-bar {
   padding: 10px 0 !important;
 }
-.search-bar input{
+
+.search-bar input {
   padding: 10px !important;
+}
+
+.news-card {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.news-card img {
+  height: 130px;
+}
+
+.new-card-content {
+  display: flex !important;
+  gap: 10px;
+}
+
+.new-card-footer {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

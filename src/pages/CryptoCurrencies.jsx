@@ -5,6 +5,7 @@ import millify from "millify";
 import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Search from "antd/lib/transfer/search";
+import Loading from "components/Loading";
 
 const CryptoCurrencies = ({ simplified = false }) => {
   const { data, isFetching } = useGetCryptosQuery(simplified ? 10 : 100);
@@ -25,7 +26,7 @@ const CryptoCurrencies = ({ simplified = false }) => {
     }
   }, [data?.data?.coins, isFetching, search]);
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loading />;
   return (
     <div
       className="site-card-wrapper"
@@ -57,7 +58,7 @@ const CryptoCurrencies = ({ simplified = false }) => {
                 }
                 hoverable
               >
-                <p>Price: {millify(currency.price)}</p>
+                <p>Price: $ {millify(currency.price)}</p>
                 <p>Market Cap: {millify(currency.marketCap)}</p>
                 <Statistic
                   title="Daily Change"

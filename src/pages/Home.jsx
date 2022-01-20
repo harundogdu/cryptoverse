@@ -1,6 +1,7 @@
 import { Col, Row, Statistic } from "antd";
 import Title from "antd/lib/typography/Title";
 import { Main } from "components";
+import Loading from "components/Loading";
 import millify from "millify";
 import { CryptoCurrencies, News } from "pages";
 import React from "react";
@@ -9,7 +10,7 @@ import { useGetCryptosQuery } from "services/cryptoApi";
 const Home = () => {
   const { data, isFetching, error } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loading />;
   return (
     <Main>
       <div className="home-container">

@@ -7,6 +7,7 @@ import moment from "moment";
 import { Select } from "antd";
 import { useGetCryptosQuery } from "services/cryptoApi";
 import Text from "antd/lib/typography/Text";
+import Loading from "components/Loading";
 
 const News = ({ simplified = false }) => {
   const [newsCategory, setNewsCategory] = useState("cryptocurrency");
@@ -34,7 +35,7 @@ const News = ({ simplified = false }) => {
     setSearchCategory(val);
   }
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loading />;
 
   return (
     <div

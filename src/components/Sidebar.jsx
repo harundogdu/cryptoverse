@@ -4,7 +4,6 @@ import React from "react";
 import {
   AppstoreOutlined,
   CloudOutlined,
-  ShopOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
@@ -31,12 +30,6 @@ const Sidebar = () => {
       title: "News",
       icon: <VideoCameraOutlined />,
       link: "/news",
-    },
-    {
-      id: 4,
-      title: "Exchanges",
-      icon: <ShopOutlined />,
-      link: "/exchanges",
     },
   ];
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import { Footer } from "antd/lib/layout/layout";
 const FooterArea = () => {
   return (
-    <Footer style={{ textAlign: "center" }}>
-      Cryptoverse ©2022 Created by Harun Doğdu
-    </Footer>
+    <div className="footer-area">
+      Cryptoverse © 2022  for source code click <a href="https://github.com/harundogdu" target="_blank" rel="noreferrer">here</a>   | created by <a href="https://harundogdu.com" target="_blank" rel="noreferrer">Harun Doğdu </a>
+
+    </div>
   );
 };
 
